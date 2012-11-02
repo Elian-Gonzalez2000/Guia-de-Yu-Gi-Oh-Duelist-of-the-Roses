@@ -34,6 +34,7 @@ body {
     #f2e341 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0faec3', endColorstr='#f2e341',GradientType=1 ); /* IE6-9 */
+  overflow-x: hidden;
 }
 
 a {
@@ -49,6 +50,7 @@ ul {
 .container {
   width: 90vw;
   margin: auto;
+  max-width: 1100px;
 }
 
 /*ESTILOS DEL HEADER*/
@@ -71,9 +73,9 @@ ul {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
-  background: #000;
-  color: #fff;
+  bottom: 0%;
+  background: #131212;
+  color: #f3f3f3;
   width: 15vw;
 }
 
@@ -87,29 +89,43 @@ ul {
 
 /*ESTILOS DE LOS ENLACES DEL MENU DE NAVEGACION ESTATICO*/
 .menu-nav ul li a {
-  color: #fff;
+  color: #f3f3f3;
   font-size: 13px;
   display: inline-block;
-  padding: 8px 10px;
+  padding: 8px 0.2rem;
   width: 90%;
-  border-bottom: 1px solid #2d2d2d;
+  border-bottom: 1px solid #222222;
+  line-height: 1.2rem;
+}
+.menu-nav ul li a:hover {
+  opacity: 1;
+  background: #030303;
+  transition: all 0.5s ease;
+  color: #fcc707;
+}
+
+a[data-scroll-spy].active {
+  opacity: 1;
+  background: #030303;
+  transition: all 0.5s ease;
+  color: #fcc707;
 }
 
 .menu-btn {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 5vh;
+  left: 5vw;
   width: 4rem;
   height: 4rem;
   display: flex;
   justify-content: center;
   align-content: center;
-  background: #000;
-  color: #fff;
+  background: #222;
+  color: #f3f3f3;
   font-size: 3rem;
   border-radius: 50%;
-  padding-top: 6px;
-  padding-right: 3px;
+  padding-top: 5px;
+  padding-right: 3.5px;
   cursor: pointer;
   z-index: 999;
   visibility: hidden;
@@ -122,21 +138,24 @@ ul {
   width: 86%;
   padding: 20px 0;
   line-height: 22px;
-  text-align: justify;
+  text-align: left;
 }
 
 /*ESTILOS DE LOS TITULOS DE LAS SECCIONES*/
 .content-section h3 {
-  padding: 18px 30px;
+  padding: 1rem 2rem;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
+  border-top: thin solid #ff5500;
+  border-bottom: thin solid #ff5500;
 }
 
 /*ESTILOS DE LOS PARRAFOS DE CONTENIDO*/
 .content-section p {
   padding: 17px;
   font-size: 17px;
+  line-height: 1.6rem;
 }
 
 .content-section p .cartas {
@@ -166,13 +185,13 @@ ul {
 .content-section .content-images figcaption {
   text-align: center;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 /*ESTILOS DE LOS ENLACES DE AYUDA*/
 .enlaces-ayuda {
-  padding: 20px;
-  font-size: 15px;
+  padding: 1rem;
+  font-size: 1rem;
 
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0faec3+0,fffd2f+0,fffc4c+100 */
   background: #0faec3; /* Old browsers */
@@ -198,23 +217,28 @@ ul {
 
   width: 100vw;
   margin-left: -5vw;
-  border: 2px solid yellow;
+  border: thin solid #ddcc11;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .enlaces-ayuda p {
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .enlaces-ayuda a {
-  line-height: 30px;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  border-bottom: thin solid #222;
+  transition: 0.4s all ease;
 }
 
 .enlaces-ayuda a:hover {
-  border-bottom: 2px solid #000;
-  opacity: 0.8;
-  font-weight: bold;
+  border-bottom: none;
+  opacity: 1;
+  color: #ff5500;
 }
 
 @media (max-width: 1250px) {
@@ -222,8 +246,8 @@ ul {
     color: #fff;
     font-size: 13px;
     display: inline-block;
-    padding: 8px 10px;
-    width: 90%;
+    width: 100%;
+    padding: 8px 0.3rem;
     border-bottom: 2px solid #2d2d2d;
   }
 
@@ -232,7 +256,7 @@ ul {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   .header {
     width: 100vw;
     margin-left: -5vw;
@@ -243,43 +267,50 @@ ul {
   }
   .menu-nav {
     width: 100vw;
-    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.7);
     transform: translate(100vw, 0);
     transition: all 0.5s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow-y: scroll;
   }
   .menu-nav ul {
-    margin-left: 52vw;
     opacity: 1;
     width: 50%;
-    text-align: right;
-    background: #000;
+    height: 100%;
+    margin-top: 0;
+    background-color: #222;
   }
 
   .menu-nav ul li {
-    padding-top: 10px;
+    width: 100%;
   }
 
   .menu-nav ul li a {
+    width: 100%;
     color: #fff;
     font-size: 13px;
     display: inline-block;
-    padding: 8px 10px;
+    padding: 0.7rem 0.5rem;
+    background-color: #161615;
     border-bottom: 2px solid #2d2d2d;
     z-index: 997;
     opacity: 1;
     text-align: center;
   }
 
-  .menu-nav ul li:hover {
-    font-weight: bold;
+  .menu-nav ul li a:hover {
+    color: #fcc707;
     opacity: 1;
-    background: #2d2d2d;
+    background: #030303;
     transition: all 0.5s ease;
   }
 
   .menu-btn {
     visibility: visible;
     opacity: 0.8;
+    transition: all 0.5s ease-in-out;
   }
 
   .show {
@@ -287,10 +318,18 @@ ul {
     transition: transform 0.5s ease;
   }
 
+  .active {
+    opacity: 1;
+    background: #030303;
+    transition: all 0.5s ease;
+    color: #fcc707;
+  }
+
   .menu-btn:hover {
-    background: #1f1f1e;
+    background: #030303;
     opacity: 1;
     transition: all 0.5 ease-in-out;
+    color: #ddcc11;
   }
   .active-btn {
     transform: rotate(90deg);
@@ -304,14 +343,28 @@ ul {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .content-section img {
     height: 150px;
   }
+
+  .header {
+    margin-left: 0vw;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .content-section img {
     height: 110px;
+  }
+
+  .menu-nav ul {
+    width: 60%;
+  }
+
+  .content-section .content-images figcaption {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 300;
   }
 }
