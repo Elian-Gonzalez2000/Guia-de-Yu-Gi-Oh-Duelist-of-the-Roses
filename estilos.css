@@ -1,0 +1,86 @@
+/*ESTILOS GENERALES*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #000;
+	background-color: #ffdd44;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+/*ESTILOS DEL CONTAINER*/
+.container{
+	width: 90vw;
+	margin: auto;
+}
+
+/*ESTILOS DEL HEADER*/
+.header {
+	text-align: center;
+	background: -webkit-linear-gradient(top, #DDCC11, #FF5500);
+	background: -moz-linear-gradient(top, #DDCC11, #FF5500);
+	width: 100vw;
+	margin-left: -10vw;
+	padding: 20px 0;
+}
+
+/*ESTILOS DEL MENU DE NAVEGACION ESTATICO*/
+.menu-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	color: #fff;
+	width: 15vw;
+}
+
+.menu-nav ul li {
+	padding: 8px 10px;
+	text-align: center;
+}
+
+.menu-nav ul li a {
+	color: #fff;
+	font-size: 14px;
+}
+
+.menu-nav ul li a:hover {
+	border-bottom: 2px solid #fff;
+}
+
+/*ESTILOS DE LAS SECCIONES DE CONTENIDO*/
+.content-section {
+	width: 86%;
+	padding: 20px 0;
+	line-height: 22px;
+	text-align: justify;
+}
+
+.content-section h3 {
+	padding: 18px 30px;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.content-section p {
+	padding: 17px;
+}
