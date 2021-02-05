@@ -85,6 +85,12 @@ ul {
 	padding: 17px;
 }
 
+.content-section p .cartas {
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*ESTILOS DE LAS IMAGENES*/
 .content-section .content-images {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -104,5 +110,5 @@ ul {
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
-	
+
 }
