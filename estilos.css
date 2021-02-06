@@ -1,265 +1,317 @@
 /*ESTILOS GENERALES*/
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-	scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-	font-size: 16px;
-	font-family: sans-serif;
-	color: #000;
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0faec3+0,fcc707+0,f2e341+100 */
-background: #0faec3; /* Old browsers */
-background: -moz-linear-gradient(left,  #0faec3 0%, #fcc707 0%, #f2e341 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  #0faec3 0%,#fcc707 0%,#f2e341 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  #0faec3 0%,#fcc707 0%,#f2e341 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0faec3', endColorstr='#f2e341',GradientType=1 ); /* IE6-9 */
-
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #000;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0faec3+0,fcc707+0,f2e341+100 */
+  background: #0faec3; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #0faec3 0%,
+    #fcc707 0%,
+    #f2e341 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #0faec3 0%,
+    #fcc707 0%,
+    #f2e341 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0faec3 0%,
+    #fcc707 0%,
+    #f2e341 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0faec3', endColorstr='#f2e341',GradientType=1 ); /* IE6-9 */
 }
 
 a {
-	text-decoration: none;
-	color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 /*ESTILOS DEL CONTAINER*/
-.container{
-	width: 90vw;
-	margin: auto;
+.container {
+  width: 90vw;
+  margin: auto;
 }
 
 /*ESTILOS DEL HEADER*/
 .header {
-	text-align: center;
-	background: -webkit-linear-gradient(top, #DDCC11, #FF5500);
-	background: -moz-linear-gradient(top, #DDCC11, #FF5500);
-	width: 100vw;
-	margin-left: -10vw;
-	padding: 20px 0;
-	margin-bottom: 20px;
+  text-align: center;
+  background: -webkit-linear-gradient(top, #ddcc11, #ff5500);
+  background: -moz-linear-gradient(top, #ddcc11, #ff5500);
+  width: 100vw;
+  margin-left: -10vw;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.header .titulo-principal {
+  font-size: 1.7rem;
 }
 
 /*ESTILOS DEL MENU DE NAVEGACION ESTATICO*/
 .menu-nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: #000;
-	color: #fff;
-	width: 15vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  width: 15vw;
 }
 
 .menu-nav ul {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .menu-nav ul li {
-	text-align: center;
+  text-align: center;
 }
 
 /*ESTILOS DE LOS ENLACES DEL MENU DE NAVEGACION ESTATICO*/
 .menu-nav ul li a {
-	color: #fff;
-	font-size: 13px;
-	display: inline-block;
-	padding: 8px 10px;
-	width: 90%;
-	border-bottom: 1px solid #2d2d2d;
-}
-
-.menu-nav ul li a:hover {
-	text-decoration: underline;
-	opacity: .8;
+  color: #fff;
+  font-size: 13px;
+  display: inline-block;
+  padding: 8px 10px;
+  width: 90%;
+  border-bottom: 1px solid #2d2d2d;
 }
 
 .menu-btn {
-		position: fixed;
-		bottom: 20px;
-		left: 20px;
-		width: 4rem;
-		height: 4rem;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		background: #000;
-		color: #fff;
-		font-size: 3rem;
-		border-radius: 50%;
-		padding-top: 6px;
-		padding-right: 3px; 
-		cursor: pointer;
-		z-index: 999;
-		visibility: hidden;
-		opacity: 0;
-	}
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #000;
+  color: #fff;
+  font-size: 3rem;
+  border-radius: 50%;
+  padding-top: 6px;
+  padding-right: 3px;
+  cursor: pointer;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 
 /*ESTILOS DE LAS SECCIONES DE CONTENIDO*/
 .content-section {
-	width: 86%;
-	padding: 20px 0;
-	line-height: 22px;
-	text-align: justify;
+  width: 86%;
+  padding: 20px 0;
+  line-height: 22px;
+  text-align: justify;
 }
 
 /*ESTILOS DE LOS TITULOS DE LAS SECCIONES*/
 .content-section h3 {
-	padding: 18px 30px;
-	text-align: center;
-	font-size: 2rem;
-	font-weight: 500;
+  padding: 18px 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 /*ESTILOS DE LOS PARRAFOS DE CONTENIDO*/
 .content-section p {
-	padding: 17px;
-	font-size: 17px;
+  padding: 17px;
+  font-size: 17px;
 }
 
 .content-section p .cartas {
-	font-weight: bold;
-	font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 /*POSICIONAMIENTO DE LAS IMAGENES CON GRID*/
 .content-section .content-images {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr;
-	align-items: center;
-	justify-items: center;
-	justify-content: center;
-	align-content: center;
-	gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
 }
 
 /*ESTILOS DEL TAMAÑO DE LAS IMAGENES*/
-.content-section img{
-	width: 100%;
-	height: 200px;
+.content-section img {
+  width: 100%;
+  height: 200px;
 }
 
 /*ESTILOS DE LOS CAPTION DE LAS IMAGENES*/
-.content-section .content-images figcaption{
-	text-align: center;
-	font-size: 14px;
-	font-weight: bold;
-
+.content-section .content-images figcaption {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /*ESTILOS DE LOS ENLACES DE AYUDA*/
 .enlaces-ayuda {
-	padding: 20px;
-	font-size: 15px;
+  padding: 20px;
+  font-size: 15px;
 
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0faec3+0,fffd2f+0,fffc4c+100 */
-background: #0faec3; /* Old browsers */
-background: -moz-linear-gradient(left,  #0faec3 0%, #fffd2f 0%, #fffc4c 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  #0faec3 0%,#fffd2f 0%,#fffc4c 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  #0faec3 0%,#fffd2f 0%,#fffc4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0faec3', endColorstr='#fffc4c',GradientType=1 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0faec3+0,fffd2f+0,fffc4c+100 */
+  background: #0faec3; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #0faec3 0%,
+    #fffd2f 0%,
+    #fffc4c 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #0faec3 0%,
+    #fffd2f 0%,
+    #fffc4c 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0faec3 0%,
+    #fffd2f 0%,
+    #fffc4c 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0faec3', endColorstr='#fffc4c',GradientType=1 ); /* IE6-9 */
 
-	width: 100vw;
-	margin-left: -5vw;
-	border: 2px solid yellow;
+  width: 100vw;
+  margin-left: -5vw;
+  border: 2px solid yellow;
 }
 
 .enlaces-ayuda p {
-	font-weight: bold;
-	font-size: 1.2rem;
-	margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .enlaces-ayuda a {
-	line-height: 30px;
+  line-height: 30px;
 }
 
 .enlaces-ayuda a:hover {
-	border-bottom: 2px solid #000;
-	opacity: 0.8;
-	font-weight: bold;
-} 
-
-@media(max-width: 1250px ){
-	.menu-nav ul li a {
-		color: #fff;
-		font-size: 13px;
-		display: inline-block;
-		padding: 8px 10px;
-		width: 90%;
-		border-bottom: 2px solid #2d2d2d;
-	}
-
-	.menu-nav ul {
-		margin-top: 10px;
-	}
-
+  border-bottom: 2px solid #000;
+  opacity: 0.8;
+  font-weight: bold;
 }
 
-@media(max-width: 1000px ){
-	.header {
-		width: 100vw;
-		margin-left: -5vw;
-	}
-	.menu-nav {
-		width: 100vw;
-		opacity: 0.7;
-		transform: translate(100vw, 0);
-		transition: all .5s ease;
-	}
-	.menu-nav ul {
-		margin-left: 52vw;
-		opacity: 1;
-		width: 50%;
-		text-align: right;
-		background: #000;
-	}
+@media (max-width: 1250px) {
+  .menu-nav ul li a {
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    padding: 8px 10px;
+    width: 90%;
+    border-bottom: 2px solid #2d2d2d;
+  }
 
-	.menu-nav ul li {
-		padding-top: 10px;
-	}
+  .menu-nav ul {
+    margin-top: 10px;
+  }
+}
 
-	.menu-nav ul li a {
-		color: #fff;
-		font-size: 13px;
-		display: inline-block;
-		padding: 8px 10px;
-		border-bottom: 2px solid #2d2d2d;
-		z-index: 997;
-		opacity: 1;
-		text-align: center;
+@media (max-width: 1000px) {
+  .header {
+    width: 100vw;
+    margin-left: -5vw;
+  }
+  .header .titulo-principal {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .menu-nav {
+    width: 100vw;
+    opacity: 0.7;
+    transform: translate(100vw, 0);
+    transition: all 0.5s ease;
+  }
+  .menu-nav ul {
+    margin-left: 52vw;
+    opacity: 1;
+    width: 50%;
+    text-align: right;
+    background: #000;
+  }
 
-	}
+  .menu-nav ul li {
+    padding-top: 10px;
+  }
 
-	.menu-nav ul li:hover{
-		font-weight: bold;
-		opacity: 1;
-		background: #2d2d2d;
-		transition: all .5s ease;
-	}
+  .menu-nav ul li a {
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    padding: 8px 10px;
+    border-bottom: 2px solid #2d2d2d;
+    z-index: 997;
+    opacity: 1;
+    text-align: center;
+  }
 
-	.menu-btn{
-		visibility: visible;
-		opacity: 1;
-	}
+  .menu-nav ul li:hover {
+    font-weight: bold;
+    opacity: 1;
+    background: #2d2d2d;
+    transition: all 0.5s ease;
+  }
 
-	.show {
-		transform: translate(0, 0);
-		transition: transform .5s ease;
-	}
+  .menu-btn {
+    visibility: visible;
+    opacity: 0.8;
+  }
 
-	.content-section {
-		width: 100%;
-		padding: 20px 0;
-		line-height: 22px;
-	}
+  .show {
+    transform: translate(0, 0);
+    transition: transform 0.5s ease;
+  }
+
+  .menu-btn:hover {
+    background: #1f1f1e;
+    opacity: 1;
+    transition: all 0.5 ease-in-out;
+  }
+  .active-btn {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+  }
+
+  .content-section {
+    width: 100%;
+    padding: 20px 0;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content-section img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-section img {
+    height: 110px;
+  }
 }

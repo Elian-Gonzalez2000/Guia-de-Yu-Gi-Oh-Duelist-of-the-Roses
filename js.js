@@ -7,6 +7,8 @@ const d = document,
 			if(e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)){
 				d.querySelector(panel).classList.toggle("show");
 				d.querySelector(panelBtn).classList.toggle("show");
+            d.querySelector(panelBtn).classList.toggle("active-btn");
+
 			}
 
 			if(e.target.matches(menuLinks) || e.target.matches(`${menuLinks} *`)){
