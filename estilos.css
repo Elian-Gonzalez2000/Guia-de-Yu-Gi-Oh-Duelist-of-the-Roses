@@ -241,6 +241,18 @@ a[data-scroll-spy].active {
   color: #ff5500;
 }
 
+.footer {
+  background-color: #d4b500;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+.footer p {
+  font-weight: bold;
+  margin-left: -10vw;
+}
+
 @media (max-width: 1250px) {
   .menu-nav ul li a {
     color: #fff;
@@ -340,6 +352,10 @@ a[data-scroll-spy].active {
     width: 100%;
     padding: 20px 0;
     line-height: 22px;
+  }
+
+  .footer p {
+    margin-left: 0;
   }
 }
 
